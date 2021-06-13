@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
+
+var webSocket = new WebSocket('wss://www.cryptofacilities.com/ws/v1');
+console.log(`webSocket.readyState`, webSocket.readyState)
+webSocket.onopen = () => {
+  console.log(`webSocket.readyState`, webSocket.readyState);
+  console.log(`WebSocket connection is now Open`);
+}
+webSocket.onmessage = (message) => {
+  console.log('Message', message);
+};
+// Implement the other event listeners here or in a seperate component
 
 ReactDOM.render(
   <React.StrictMode>

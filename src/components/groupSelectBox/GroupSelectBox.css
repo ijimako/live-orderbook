@@ -1,0 +1,12 @@
+.dropdown button {
+  padding: 0 10px;
+}
+
+.dropdown-menu {
+  background-color: #6c757d!important;
+}
+.dropdown-menu button{
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}

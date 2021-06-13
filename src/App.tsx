@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import "./App.css"
+import GroupSelectBox from "./components/groupSelectBox/GroupSelectBox"
+import Orderbook from "./components/orderbook/Orderbook"
+import ToggleFeed from "./components/toggleFeed/ToggleFeed"
+import KillFeed from "./components/killFeed/KillFeed"
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="orderbook-container">
+        <div className="orderbook-header">
+          <span>Order Book</span>
+          <GroupSelectBox />
+        </div>
+        <Orderbook />
+        <div className="orderbook-buttons">
+          <ToggleFeed />
+          <KillFeed />
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

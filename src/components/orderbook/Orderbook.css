@@ -1,0 +1,26 @@
+.Orderbook {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .Orderbook {
+    flex-direction: column;
+  }
+  .sell-orderbook {
+    direction: rtl;
+  }
+  .sell-orderbook th {
+    display: none;
+  }
+}
+
+.Orderbook th {
+  color: #505765;
+}
+
+.Orderbook th, td {
+  padding: 0 40px;
+}

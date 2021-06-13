@@ -1,0 +1,10 @@
+.toggle-feed {
+  background-color: #5541d9!important;
+  border-color: #5541d9!important;
+  margin: 5px;
+}
+
+.toggle-feed svg {
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
