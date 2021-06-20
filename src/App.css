@@ -9,6 +9,10 @@
   color: white;
 }
 
+#crypto-name {
+  font-weight: bold;
+}
+
 .orderbook-container {
   margin: 30px;
   border: 5px solid #26303f;

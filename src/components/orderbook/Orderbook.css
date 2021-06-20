@@ -3,24 +3,85 @@
   flex-direction: row-reverse;
   text-align: right;
   margin: 10px 0;
+  min-height: 70vh;
+  min-width: 900px;
 }
 
-@media only screen and (max-width: 768px) {
-  .Orderbook {
-    flex-direction: column;
-  }
-  .sell-orderbook {
-    direction: rtl;
-  }
-  .sell-orderbook th {
-    display: none;
-  }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% {  transform: rotate(359deg); }
+}
+
+.Orderbook svg {
+  margin: auto;
+  animation: spin 2s linear infinite;
+}
+
+#buy-orderbook,
+#sell-orderbook {
+  display: block;
+}
+
+.Orderbook td {
+  font-family: 'Courier Prime', monospace;
+  font-weight: bold;
 }
 
 .Orderbook th {
   color: #505765;
 }
 
+.Orderbook .bid-price {
+  color: #0e986f;
+}
+
+.Orderbook .ask-price {
+  color: #e64242;
+}
+
 .Orderbook th, td {
-  padding: 0 40px;
+  padding: 1px 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Orderbook {
+    flex-direction: column;
+    min-width: 320px;
+  }
+
+  #sell-orderbook {
+    direction: rtl;
+    margin-top: 20px;
+    margin-right: 50px;
+  }
+
+  #sell-orderbook th {
+    display: none;
+  }
+
+  #buy-orderbook {
+    margin-right: 50px;
+  }
+
+  #buy-orderbook tbody,
+  /* #sell-orderbook tbody, */
+  #buy-orderbook thead {
+  /* #sell-orderbook thead { */
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #buy-orderbook tr,
+  #sell-orderbook tr {
+    margin: 0 auto;
+  }
+
+  #buy-orderbook tr td,
+  #sell-orderbook tr td,
+  #buy-orderbook tr th,
+  #sell-orderbook tr th {
+    min-width: 80px;
+    padding: 0;
+    width: 150px;
+  }
 }
